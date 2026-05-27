@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Impulsa Perú | Presidencia 2026</title>
+
+<link rel="icon" type="image/png" href="https://i.ibb.co/wFCVpCDS/Whats-App-Image-2026-05-27-at-2-19-03-PM.jpg">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Montserrat',sans-serif;
+background:#f4f6fb;
+color:#111;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:10px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(5,10,25,.92);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+display:flex;
+align-items:center;
+}
+
+.logo img{
+height:110px;
+width:auto;
+object-fit:contain;
+filter:
+drop-shadow(0 0 15px rgba(255,255,255,.18))
+drop-shadow(0 0 30px rgba(212,175,55,.18));
+transition:.3s;
+}
+
+.logo img:hover{
+transform:scale(1.05);
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:15px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:120px 8%;
+position:relative;
+overflow:hidden;
+background:
+linear-gradient(to right, rgba(3,8,20,.92), rgba(3,8,20,.72)),
+url('https://ojo.pe/resizer/Zqy1n-YEzlhc5ETcM-Y4GN0-Yw8=/1200x675/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/7IFL3P7ROBE75O6GMR3MSIICQU.jpg');
+background-size:cover;
+background-position:center;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+right:-200px;
+top:-100px;
+width:700px;
+height:700px;
+background:radial-gradient(circle,rgba(212,175,55,.15),transparent 70%);
+}
+
+.hero-left{
+position:relative;
+z-index:2;
+max-width:750px;
+}
+
+.hero-left h4{
+color:#d4af37;
+font-size:18px;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+.hero-left h1{
+font-size:85px;
+line-height:1;
+font-weight:900;
+color:white;
+margin-bottom:30px;
+}
+
+.hero-left p{
+font-size:20px;
+line-height:1.9;
+color:#e4e4e4;
+margin-bottom:40px;
+max-width:650px;
+}
+
+.hero-buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:18px 34px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+transition:.3s;
+display:inline-block;
+}
+
+.btn-primary{
+background:#d4af37;
+color:#041023;
+}
+
+.btn-primary:hover{
+transform:translateY(-5px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:#041023;
+}
+
+/* STATS */
+
+.stats{
+margin-top:-70px;
+padding:0 8%;
+position:relative;
+z-index:10;
+}
+
+.stats-container{
+background:white;
+padding:40px;
+border-radius:30px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.stat{
+text-align:center;
+}
+
+.stat h2{
+font-size:45px;
+color:#041023;
+margin-bottom:10px;
+}
+
+.stat p{
+color:#666;
+font-weight:600;
+}
+
+/* SECTIONS */
+
+section{
+padding:110px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:70px;
+}
+
+.section-title h2{
+font-size:56px;
+margin-bottom:18px;
+color:#041023;
+}
+
+.section-title p{
+font-size:18px;
+color:#666;
+}
+
+/* PROPOSALS */
+
+.proposal-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:35px;
+}
+
+.proposal-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+transition:.4s;
+}
+
+.proposal-card:hover{
+transform:translateY(-10px);
+}
+
+.proposal-card img{
+width:100%;
+height:240px;
+object-fit:cover;
+}
+
+.proposal-content{
+padding:30px;
+}
+
+.proposal-content h3{
+font-size:28px;
+margin-bottom:15px;
+color:#041023;
+}
+
+.proposal-content p{
+line-height:1.8;
+color:#666;
+}
+
+/* ABOUT */
+
+.about{
+background:#041023;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:70px;
+color:white;
+}
+
+.about img{
+width:100%;
+max-width:520px;
+border-radius:30px;
+object-fit:cover;
+}
+
+.about-text{
+max-width:700px;
+}
+
+.about-text h2{
+font-size:58px;
+margin-bottom:25px;
+}
+
+.about-text p{
+line-height:1.9;
+color:#d5d5d5;
+margin-bottom:25px;
+font-size:17px;
+}
+
+/* PLAN */
+
+.government-plan{
+display:flex;
+flex-direction:column;
+gap:35px;
+max-width:1100px;
+margin:auto;
+}
+
+.plan-box{
+background:white;
+padding:40px;
+border-radius:28px;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.plan-box h3{
+font-size:34px;
+margin-bottom:20px;
+color:#041023;
+}
+
+.plan-box p{
+line-height:1.9;
+font-size:17px;
+color:#555;
+}
+
+.extra-content{
+max-height:0;
+overflow:hidden;
+transition:.5s;
+}
+
+.plan-box.active .extra-content{
+max-height:500px;
+margin-top:20px;
+}
+
+.read-more-btn{
+margin-top:25px;
+padding:15px 28px;
+border:none;
+background:#041023;
+color:white;
+border-radius:50px;
+font-weight:700;
+cursor:pointer;
+transition:.3s;
+}
+
+.read-more-btn:hover{
+background:#d4af37;
+color:#041023;
+}
+
+/* NEWS */
+
+.news-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
+}
+
+.news-card{
+background:white;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+}
+
+.news-card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.news-content{
+padding:30px;
+}
+
+.news-content h3{
+font-size:26px;
+margin-bottom:15px;
+}
+
+/* CTA */
+
+.cta{
+margin:0 8% 100px;
+padding:100px 40px;
+border-radius:40px;
+text-align:center;
+background:
+linear-gradient(rgba(4,15,35,.88),rgba(4,15,35,.88)),
+url('https://f.rpp-noticias.io/2025/03/21/505850_1720531.jpg?width=1020&quality=80');
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.cta h2{
+font-size:58px;
+margin-bottom:20px;
+}
+
+.cta p{
+font-size:20px;
+color:#ddd;
+margin-bottom:40px;
+}
+
+/* FOOTER */
+
+footer{
+background:#020b1a;
+padding:70px 8%;
+color:white;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-grid h3{
+margin-bottom:20px;
+font-size:22px;
+}
+
+.footer-grid p,
+.footer-grid a{
+color:#c9c9c9;
+text-decoration:none;
+line-height:2;
+display:block;
+}
+
+.footer-bottom{
+margin-top:50px;
+padding-top:30px;
+border-top:1px solid rgba(255,255,255,.08);
+text-align:center;
+color:#888;
+}
+
+/* MAPA */
+
+.map-section{
+background:white;
+}
+
+.map-container{
+position:relative;
+max-width:700px;
+margin:auto;
+}
+
+.map-container img{
+width:100%;
+filter:drop-shadow(0 15px 30px rgba(0,0,0,.15));
+}
+
+.pulse{
+position:absolute;
+width:18px;
+height:18px;
+background:#d4af37;
+border-radius:50%;
+animation:pulse 2s infinite;
+box-shadow:0 0 0 rgba(212,175,55,.7);
+}
+
+.pulse1{
+top:35%;
+left:48%;
+}
+
+.pulse2{
+top:52%;
+left:40%;
+}
+
+.pulse3{
+top:70%;
+left:52%;
+}
+
+.pulse4{
+top:25%;
+left:58%;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(.8);
+box-shadow:0 0 0 0 rgba(212,175,55,.7);
+}
+
+70%{
+transform:scale(1.4);
+box-shadow:0 0 0 20px rgba(212,175,55,0);
+}
+
+100%{
+transform:scale(.8);
+box-shadow:0 0 0 0 rgba(212,175,55,0);
+}
+
+}
+
+/* PARTICLES */
+
+.particles{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.particles span{
+position:absolute;
+display:block;
+width:4px;
+height:4px;
+background:rgba(212,175,55,.5);
+border-radius:50%;
+animation:animateParticles linear infinite;
+bottom:-150px;
+}
+
+@keyframes animateParticles{
+
+0%{
+transform:translateY(0) scale(1);
+opacity:0;
+}
+
+10%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.hero-left h1{
+font-size:58px;
+}
+
+.stats-container{
+grid-template-columns:repeat(2,1fr);
+}
+
+.about{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:700px){
+
+nav ul{
+display:none;
+}
+
+.hero{
+padding-top:150px;
+}
+
+.hero-left h1{
+font-size:42px;
+}
+
+.section-title h2,
+.about-text h2,
+.cta h2{
+font-size:38px;
+}
+
+.stats-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+<div class="particles"></div>
+<nav>
+
+<div class="logo">
+<img src="https://i.ibb.co/23XKr3MH/Chat-GPT-Image-27-may-2026-02-53-43-p-m.png" alt="Impulsa Perú">
+</div>
+
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#propuestas">Propuestas</a></li>
+<li><a href="#nosotros">Candidato</a></li>
+<li><a href="#plan">Plan</a></li>
+<li><a href="#noticias">Noticias</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h4>PRESIDENCIA DEL PERÚ 2026</h4>
+
+<h1>El Perú merece volver a crecer con fuerza.</h1>
+
+<p>
+Un proyecto presidencial moderno enfocado en seguridad, economía,
+educación y desarrollo nacional. Construyamos juntos un país fuerte,
+seguro y lleno de oportunidades.
+</p>
+
+<div class="hero-buttons">
+<a href="#" class="btn btn-primary">Conoce el Plan</a>
+<a href="#" class="btn btn-outline">Únete al Movimiento</a>
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stats-container">
+
+<div class="stat">
+<h2 class="counter" data-target="24">0</h2>
+<p>Regiones Visitadas</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="1000000">0</h2>
+<p>Ciudadanos Alcanzados</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="150">0</h2>
+<p>Eventos Nacionales</p>
+</div>
+
+<div class="stat">
+<h2 class="counter" data-target="2026">0</h2>
+<p>Compromiso con el Perú</p>
+</div>
+
+</div>
+
+</div>
+
+<section class="map-section">
+
+<div class="section-title">
+<h2>Presencia Nacional</h2>
+<p>Impulsa Perú recorriendo cada región del país.</p>
+</div>
+
+<div class="map-container">
+
+<img src="https://png.pngtree.com/background/20230410/original/pngtree-map-of-peru-political-map-of-peru-with-the-several-regions-picture-image_2382179.jpg" alt="Mapa Perú">
+
+<div class="pulse pulse1"></div>
+<div class="pulse pulse2"></div>
+<div class="pulse pulse3"></div>
+<div class="pulse pulse4"></div>
+
+</div>
+
+</section>
+
+<!-- PROPUESTAS -->
+
+<section id="propuestas">
+
+<div class="section-title">
+<h2>Propuestas para el Perú</h2>
+<p>Compromisos reales para transformar el país.</p>
+</div>
+
+<div class="proposal-grid">
+
+<div class="proposal-card">
+
+<img src="https://cdn01.pucp.education/idehpucp/images/2025/08/image-28-png.png">
+
+<div class="proposal-content">
+
+<h3>Seguridad Ciudadana</h3>
+
+<p>
+Recuperaremos las calles del país con tecnología, inteligencia policial y presencia militar en zonas críticas.
+</p>
+
+</div>
+
+</div>
+
+<div class="proposal-card">
+
+<img src="https://cdn-3.expansion.mx/dims4/default/b2dcbba/2147483647/resize/1280x/quality/90/?url=https%3A%2F%2Fcherry-brightspot.s3.amazonaws.com%2F2b%2F43%2F7449a75043c6a1e13dc06ee95d50%2Fempleo-eu-cnnmoney.png">
+
+<div class="proposal-content">
+
+<h3>Economía y Empleo</h3>
+
+<p>
+Impulsaremos nuevas inversiones, apoyo al emprendimiento y miles de empleos formales.
+</p>
+
+</div>
+
+</div>
+
+<div class="proposal-card">
+
+<img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1974&auto=format&fit=crop">
+
+<div class="proposal-content">
+
+<h3>Educación Nacional</h3>
+
+<p>
+Modernización de colegios, internet gratuito y educación tecnológica para todos.
+</p>
+
+</div>
+
+</div>
+
+<div class="proposal-card">
+
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1974&auto=format&fit=crop">
+
+<div class="proposal-content">
+
+<h3>Salud Pública</h3>
+
+<p>
+Hospitales modernos, medicinas accesibles y atención digna para las familias peruanas.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="nosotros">
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop">
+
+<div class="about-text">
+
+<h2>Un liderazgo firme para el futuro.</h2>
+
+<p>
+Avanza Perú nace con el objetivo de recuperar la confianza, fortalecer la democracia y construir un país donde las oportunidades lleguen a todos.
+</p>
+
+<p>
+Creemos en un Perú moderno, competitivo y unido, donde la seguridad, el trabajo y la educación sean prioridad nacional.
+</p>
+
+<a href="#" class="btn btn-primary">Leer Biografía</a>
+
+</div>
+
+</section>
+
+<!-- PLAN -->
+
+<section id="plan">
+
+<div class="section-title">
+<h2>Plan de Gobierno</h2>
+<p>Un proyecto serio para transformar el Perú.</p>
+</div>
+
+<div class="government-plan">
+
+<div class="plan-box">
+
+<h3>Seguridad Nacional</h3>
+
+<p>
+Combatiremos frontalmente la delincuencia organizada, fortaleceremos la policía nacional,
+invertiremos en inteligencia artificial para vigilancia urbana y modernizaremos las comisarías.
+</p>
+
+<div class="extra-content">
+
+<p>
+También implementaremos bases de seguridad integradas en zonas con altos índices de criminalidad,
+crearemos programas de recuperación juvenil y aumentaremos el control fronterizo para combatir
+el narcotráfico y el crimen internacional.
+</p>
+
+<p>
+Se establecerán centros de monitoreo conectados en tiempo real con municipios y fuerzas policiales
+para responder de manera inmediata ante emergencias.
+</p>
+
+</div>
+
+<button class="read-more-btn">Leer más</button>
+
+</div>
+
+<div class="plan-box">
+
+<h3>Economía y Desarrollo</h3>
+
+<p>
+Promoveremos la inversión privada, reduciremos la burocracia y apoyaremos a pequeños empresarios.
+</p>
+
+<div class="extra-content">
+
+<p>
+Se desarrollarán polos industriales regionales, incentivos tributarios para empresas generadoras
+de empleo y programas de financiamiento para jóvenes emprendedores.
+</p>
+
+<p>
+Impulsaremos megaproyectos de infraestructura nacional y programas de digitalización económica
+para aumentar la competitividad del Perú.
+</p>
+
+</div>
+
+<button class="read-more-btn">Leer más</button>
+
+</div>
+
+<div class="plan-box">
+
+<h3>Educación y Tecnología</h3>
+
+<p>
+Transformaremos el sistema educativo con infraestructura moderna y tecnología gratuita.
+</p>
+
+<div class="extra-content">
+
+<p>
+Todos los colegios públicos tendrán acceso a internet de alta velocidad, laboratorios digitales y
+programas de innovación tecnológica desde primaria.
+</p>
+
+<p>
+También se fortalecerán las universidades públicas y se implementarán becas nacionales para carreras
+estratégicas.
+</p>
+
+</div>
+
+<button class="read-more-btn">Leer más</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEWS -->
+
+<section id="noticias">
+
+<div class="section-title">
+<h2>Últimas Noticias</h2>
+<p>Sigue las actividades del movimiento presidencial.</p>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+
+<img src="https://www.bnp.gob.pe/wp-content/uploads/2024/12/468603155_1010144691152264_3979420732320891844_n.jpg">
+
+<div class="news-content">
+
+<h3>Gran encuentro nacional</h3>
+
+<p>
+Miles de ciudadanos participaron en el evento central de Avanza Perú.
+</p>
+
+</div>
+
+</div>
+
+<div class="news-card">
+
+<img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1974&auto=format&fit=crop">
+
+<div class="news-content">
+
+<h3>Nuevas propuestas económicas</h3>
+
+<p>
+Presentación oficial del plan nacional de crecimiento y empleo.
+</p>
+
+</div>
+
+</div>
+
+<div class="news-card">
+
+<img src="https://www.fondep.gob.pe/wp-content/uploads/2012/02/el-peruano.jpg">
+
+<div class="news-content">
+
+<h3>Juventud con el futuro</h3>
+
+<p>
+Jóvenes emprendedores y universitarios se suman al movimiento.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<div class="cta">
+
+<h2>El Perú puede volver a avanzar.</h2>
+
+<p>
+Únete al movimiento presidencial que busca transformar el país con liderazgo y visión.
+</p>
+
+<a href="#" class="btn btn-primary">Únete Ahora</a>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<h3>IMPULSA PERÚ</h3>
+
+<p>
+Movimiento político presidencial comprometido con el desarrollo,
+la seguridad y el futuro del país.
+</p>
+
+</div>
+
+<div>
+
+<h3>Enlaces</h3>
+
+<a href="#">Inicio</a>
+<a href="#">Plan de Gobierno</a>
+<a href="#">Noticias</a>
+<a href="#">Contacto</a>
+
+</div>
+
+<div>
+
+<h3>Contacto</h3>
+
+<p>Lima, Perú</p>
+<p>contacto@avanzaperu.pe</p>
+<p>+51 999 999 999</p>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Impulsa Perú — Todos los derechos reservados.
+</div>
+
+</footer>
+
+
+<script>
+
+
+const buttons = document.querySelectorAll('.read-more-btn');
+
+buttons.forEach(button => {
+
+button.addEventListener('click', () => {
+
+const box = button.parentElement;
+
+box.classList.toggle('active');
+
+if(box.classList.contains('active')){
+button.innerText = 'Leer menos';
+}else{
+button.innerText = 'Leer más';
+}
+
+});
+
+});
+
+</script>
+
+
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+counter.innerText = '0';
+
+const updateCounter = () => {
+
+const target = +counter.getAttribute('data-target');
+const current = +counter.innerText.replace(/\D/g,'');
+
+const increment = target / 350;
+
+if(current < target){
+
+counter.innerText = `${Math.ceil(current + increment)}`;
+
+if(target >= 1000000 && current + increment >= target){
+counter.innerText = '+1M';
+}
+
+setTimeout(updateCounter,30);
+
+}else{
+counter.innerText = target;
+
+if(target >= 1000000){
+counter.innerText = '+1M';
+}
+}
+
+};
+
+updateCounter();
+
+});
+
+</script>
+
+
+<script>
+
+const particles = document.querySelector('.particles');
+
+for(let i = 0; i < 80; i++){
+
+const particle = document.createElement('span');
+
+const size = Math.random() * 4 + 1;
+
+particle.style.width = size + 'px';
+particle.style.height = size + 'px';
+
+particle.style.left = Math.random() * window.innerWidth + 'px';
+
+particle.style.animationDuration = (Math.random() * 10 + 5) + 's';
+
+particle.style.animationDelay = Math.random() * 5 + 's';
+
+particles.appendChild(particle);
+
+}
+
+</script>
+
+
+</body>
+</html>
